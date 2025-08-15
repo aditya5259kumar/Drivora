@@ -1,0 +1,90 @@
+/*-----------------------------------*\
+  #CONTACT PAGE HEADER
+\*-----------------------------------*/
+
+.page-header {
+  background: url(../assets/practical2.jpg) center center/cover;
+}
+
+/*-----------------------------------*\
+  #CONTACT
+\*-----------------------------------*/
+
+.contact-list {
+  width: fit-content;
+  display: flex;
+  gap: 3rem;
+  margin: 0 auto;
+}
+
+.contact-item {
+  background: var(--color-primary);
+  color: var(--color-gray-0);
+  font-size: 1.7rem;
+  width: 5rem;
+  aspect-ratio: 1/1;
+  border-radius: var(--radius-3);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+}
+
+.contact-item:hover {
+  background: var(--color-gray-900);
+}
+
+.address {
+  margin: 6rem 0;
+}
+
+.address-detail {
+  text-align: center;
+}
+
+.address-detail .braches-p {
+  margin: 3rem 0 1rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.address-detail h2 {
+  margin-bottom: 1rem;
+}
+
+.address-detail ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+iframe {
+  margin-top: 4rem;
+  height: 50rem;
+  width: 100%;
+}
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/* ----------------- MEDIA QUERIES (medium screens) ----------------- */
+
+@media (max-width: 767px) {
+  iframe {
+    height: 40rem;
+  }
+}
+
+/* ----------------- MEDIA QUERIES (small screens) ----------------- */
+
+@media (max-width: 600px) {
+  .contact-list {
+    margin-top: 5rem;
+    gap: 1.8rem;
+  }
+
+  iframe {
+    height: 35rem;
+  }
+}

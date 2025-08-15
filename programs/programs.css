@@ -1,0 +1,176 @@
+/*-----------------------------------*\
+  #PROGRAM PAGE HEADAER
+\*-----------------------------------*/
+
+.page-header {
+  background: url(../assets/graduate1.jpg) center center/cover;
+}
+
+/*-----------------------------------*\
+  #PROGRAM
+\*-----------------------------------*/
+
+.programs {
+  margin: 4rem 0;
+}
+
+.programs-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+}
+
+.program {
+  background: var(--color-gray-0);
+  display: flex;
+  text-align: left;
+  color: var(--color-gray-700);
+  border-radius: var(--radius-4);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.program.active {
+  background: var(--color-gray-900);
+  box-shadow: 0 0.7rem 0 var(--color-primary);
+}
+
+.program.active * {
+  color: var(--color-gray-0);
+}
+
+.program-image {
+  height: 100%;
+  width: 40%;
+}
+
+.program-info {
+  padding: 1rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.program-info h4 {
+  color: var(--color-primary) !important;
+}
+
+.program-info p {
+  font-size: 0.85rem;
+  margin: 0.8rem 0 1.3rem;
+}
+
+.program-info small {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-primary) !important;
+  transition: var(--transition);
+}
+
+.program:hover small {
+  letter-spacing: 2px;
+}
+
+/*-----------------------------------*\
+  #PROGRAM DEATILS
+\*-----------------------------------*/
+
+.programDetail {
+  margin-bottom: 6rem;
+}
+
+.programDetail-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 3rem;
+  animation: identifier 2s ease forwards;
+}
+
+@keyframes identifier {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.programDetail-left > p {
+  margin: 0.5rem 0 2rem;
+}
+
+.programDetail-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.programDetail-images div {
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.programDetail-left article {
+  background-color: var(--color-gray-0);
+  border-radius: var(--radius-4);
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.programDetail-left h5 {
+  margin-bottom: 0.6rem;
+}
+
+.programDetail-right {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  gap: 1rem;
+}
+
+.programDetail-right article {
+  background-color: var(--color-gray-0);
+  border-radius: var(--radius-5);
+  padding: 1.5rem;
+}
+
+.programDetail-right .h4-p {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.programDetail-right h2 {
+  font-weight: 700;
+}
+
+.programDetail-right div {
+  margin-top: 1.5rem;
+}
+
+.programDetail-right article p {
+  margin-top: 0.5rem;
+}
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/* ----------------- MEDIA QUERIES (large screens) ----------------- */
+
+@media (max-width: 991px) {
+    .programDetail-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----------------- MEDIA QUERIES (small screens) ----------------- */
+
+@media (max-width: 600px) {
+  .programDetail-images {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
